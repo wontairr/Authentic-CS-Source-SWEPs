@@ -1,0 +1,8 @@
+VertexLitGeneric
+{
+	$basetexture "models/weapons/glock18/frame_tex"
+
+	%keywords "frame"
+
+	$model 1
+}
