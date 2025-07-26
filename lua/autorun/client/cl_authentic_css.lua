@@ -9,7 +9,7 @@ local CSSSelectWeapon = nil
 hook.Add("Tick","CSS_SelectWeapon",function()
     if CSSSelectWeapon != nil then
         local ply = LocalPlayer()
-        if not ply:Alive() then CSSSelectWeapon = nil end
+        if not ply:Alive() then CSSSelectWeapon = nil return end
         local wep = ply:GetWeapon(CSSSelectWeapon)
         if IsValid(wep) then input.SelectWeapon(wep) CSSSelectWeapon = nil end
     end
