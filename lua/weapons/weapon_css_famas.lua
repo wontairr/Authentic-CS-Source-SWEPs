@@ -6,7 +6,7 @@ SWEP.IconLetter = "t"
 
 SWEP.HoldType = "ar2"
 
-SWEP.Spawnable = false
+SWEP.Spawnable = CSS_WeaponCompatibility:GetBool()
 
 SWEP.ViewModel  = CSS_Viewmodel("models/weapons/v_rif_famas.mdl")
 SWEP.WorldModel = Model("models/weapons/w_rif_famas.mdl")

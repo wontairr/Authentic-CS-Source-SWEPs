@@ -9,7 +9,7 @@ SWEP.HoldType = "revolver"
 SWEP.Type = CSS_Admin
 SWEP.Slot = CSS_SelectSlot(CSS_Admin)
 
-SWEP.Spawnable = false
+SWEP.Spawnable = CSS_WeaponCompatibility:GetBool()
 SWEP.AdminOnly = true
 
 

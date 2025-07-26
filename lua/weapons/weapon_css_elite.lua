@@ -12,7 +12,7 @@ SWEP.CArmsSettings = {
 	offsetAng = Angle(0,0,0)
 }
 
-SWEP.Spawnable = false
+SWEP.Spawnable = CSS_WeaponCompatibility:GetBool()
 
 
 

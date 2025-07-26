@@ -11,7 +11,7 @@ SWEP.CArmsSettings = {
 	offsetAng = Angle(0,0,0)
 }
 
-SWEP.Spawnable = false
+SWEP.Spawnable = CSS_WeaponCompatibility:GetBool()
 
 SWEP.ViewModel  = CSS_Viewmodel("models/weapons/v_rif_galil.mdl")
 SWEP.WorldModel = Model("models/weapons/w_rif_galil.mdl")
