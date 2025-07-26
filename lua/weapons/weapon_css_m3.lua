@@ -14,7 +14,7 @@ SWEP.CArmsSettings = {
 }
 
 
-SWEP.Spawnable = false
+SWEP.Spawnable = CSS_WeaponCompatibility:GetBool()
 
 SWEP.ViewModel  = CSS_Viewmodel("models/weapons/v_shot_m3super90.mdl")
 SWEP.WorldModel = Model("models/weapons/w_shot_m3super90.mdl")

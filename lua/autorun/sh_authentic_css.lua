@@ -1,3 +1,5 @@
+CSS_AuthenticPackInstalled = true
+
 list.Set("ContentCategoryIcons", "Counter-Strike: Source", "icon16/css.png")
 
 sound.Add({
@@ -23,3 +25,10 @@ if #list.Get("CSSWeapons") <= 0 then
         end
     end)
 end
+
+CSS_WeaponCompatibility = CreateConVar("css_sv_weapon_compatibility","0",{FCVAR_ARCHIVE,FCVAR_REPLICATED},
+"If set to 1, weapons will switch to a compatibility mode where they work with loadout mods and similar things. (temporary until I can figure out how to do custom spawnlists properly)",0,1)
+
+cvars.AddChangeCallback("css_sv_weapon_compatibility",function()
+    MsgC(Color(255,0,0),"css_sv_weapon_compatibility: You have to restart/change the map for the changes to take effect!\n")
+end,"css_sv_weapon_compat_change")

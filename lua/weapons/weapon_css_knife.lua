@@ -19,7 +19,7 @@ SWEP.CArmsSettings = {
 }
 local carms = CSSServerConvars.weapons_carms:GetBool()
 
-SWEP.Spawnable = false 
+SWEP.Spawnable = CSS_WeaponCompatibility:GetBool() 
 
 SWEP.ViewModel = CSS_Viewmodel("models/weapons/v_knife_t.mdl")
 SWEP.WorldModel = Model("models/weapons/w_knife_t.mdl")

@@ -8,7 +8,7 @@ SWEP.IconLetter = "B"
 
 SWEP.HoldType = "shotgun"
 
-SWEP.Spawnable = false
+SWEP.Spawnable = CSS_WeaponCompatibility:GetBool()
 
 SWEP.AdminOnly = true
 

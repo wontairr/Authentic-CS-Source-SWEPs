@@ -46,6 +46,7 @@ local function DoMiddleClick(self)
 end
 
 hook.Add("PopulateWeapons","CSS_PopulateSpawnmenu",function(pnlContent,tree,node)
+    if CSS_WeaponCompatibility:GetBool() then return end
     timer.Simple(1,function()
         if not IsValid(tree) then return end
         -- Add a node to the tree

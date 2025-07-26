@@ -6,7 +6,7 @@ SWEP.IconLetter = "r"
 
 SWEP.HoldType = "ar2"
 
-SWEP.Spawnable = false
+SWEP.Spawnable = CSS_WeaponCompatibility:GetBool()
 
 SWEP.CArmsSettings = {
 	offsetPos = Vector(-0.3,2.7,0.6),

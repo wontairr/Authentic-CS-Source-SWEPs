@@ -9,7 +9,7 @@ SWEP.Slot = CSS_SelectSlot(SWEP.Type)
 
 SWEP.HoldType = "smg"
 
-SWEP.Spawnable = false
+SWEP.Spawnable = CSS_WeaponCompatibility:GetBool()
 
 SWEP.AdminOnly = true
 
