@@ -31,7 +31,7 @@ SWEP.Primary.DefaultClip = 7
 SWEP.Primary.Delay = 0.25
 SWEP.Primary.Automatic = true
 SWEP.Primary.Damage = 22
-SWEP.Primary.Force = 3
+SWEP.Primary.Force = 1.25
 
 SWEP.ShotgunReloadAnimSpeed = CSS_UsingArms() and 1.16 or 0.75
 
