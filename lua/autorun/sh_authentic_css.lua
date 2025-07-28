@@ -46,6 +46,12 @@ local weaponList = {
     weapon_xm9000 = true
 }
 
+for name, _ in pairs(weaponList) do
+    local pretty = string.Replace(string.NiceName(string.sub(name,8,-1))," ","")
+
+    list.Add( "NPCUsableWeapons", { class = name, title = pretty }  )
+end
+
 if #list.Get("CSSWeapons") <= 0 then
     timer.Simple(1,function()
         local weaponFiles = file.Find("weapons/*.lua", "LUA")
