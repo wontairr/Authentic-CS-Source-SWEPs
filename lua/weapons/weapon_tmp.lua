@@ -82,4 +82,6 @@ SWEP.SprayPattern = {
 
 }
 
+SWEP.AutoIdle = true
+
 SWEP.IconOverride = "vgui/css/tmp_icon.png"
