@@ -34,7 +34,7 @@ SWEP.Primary.DefaultClip = 8
 SWEP.Primary.Delay = 0.88
 SWEP.Primary.Automatic = true
 SWEP.Primary.Damage = 26
-SWEP.Primary.Force = 2
+SWEP.Primary.Force = 1.25
 
 SWEP.MaxPlayerSpeed = 220
 
