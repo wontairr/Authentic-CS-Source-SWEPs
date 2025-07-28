@@ -141,7 +141,7 @@ SWEP.SprayPatternBurst = {
 
 SWEP.BurstFire = true
 SWEP.BurstDelay = 0.5
-SWEP.BurstShotDelay = SWEP.Primary.Delay
+SWEP.BurstShotDelay = SWEP.Primary.Delay / 2
 
 SWEP.BurstOffMsg = "Switched to automatic"
 
