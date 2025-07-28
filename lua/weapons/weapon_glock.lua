@@ -87,7 +87,7 @@ SWEP.IconOverride = "vgui/css/glock18_icon.png"
 function SWEP:BurstShoot()
     
 	self:TakePrimaryAmmo(self.Primary.BulletTake)
-    self:EmitSound(self:GetSound("PrimaryFire"),140,100,1,(self:Clip1() > 0 and CHAN_WEAPON or CHAN_AUTO))
+    self:EmitSound(self:GetSound("PrimaryFire"))
 
     if SERVER and self.BurstLeft == self.BurstAmount then
         self:SendAnimation(ACT_VM_SECONDARYATTACK,PLAYER_ATTACK1)
