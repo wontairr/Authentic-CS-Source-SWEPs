@@ -113,8 +113,8 @@ local function Bullet(attacker,tr,dmginfo)
                 local dir = (ent:GetPos() - wep:GetOwner():GetPos()):GetNormalized()
                 local entForward = ent:GetForward()
                 local dot = entForward:Dot(dir)
-                if dot > 0.4 and wep.SECONDARY then
-                    dmginfo:SetDamage(dmginfo:GetDamage() * 2)
+                if dot > 0.8 and wep.SECONDARY then
+                    dmginfo:SetDamage(dmginfo:GetDamage() * 3)
                     wep:EmitSound(soundBackstab)
                 else
                     wep:EmitSound(soundHitFlesh)
