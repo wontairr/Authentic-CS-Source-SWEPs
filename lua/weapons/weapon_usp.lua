@@ -2,7 +2,7 @@ SWEP.Base = "css_weapon_pistol_base"
 
 SWEP.PrintName = "K&M .45 TACTICAL"
 SWEP.Category = "Counter-Strike: Source"
-SWEP.IconLetter = "y"
+SWEP.IconLetter = "a"
 
 SWEP.HoldType = "revolver"
 
