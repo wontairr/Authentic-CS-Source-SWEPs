@@ -128,6 +128,7 @@ CSSSmokeGrenades = {}
 
 local PLAYER = FindMetaTable("Player")
 killicon.AddFont("weapon_knife","CSKillIcons","J",Color(255,80,0),0.2)
+
 hook.Add("Initialize","CSSWeapons_KillIcons",function()
     for _,weapon in ipairs(weapons.GetList()) do
         if not weapon.Base then continue end
