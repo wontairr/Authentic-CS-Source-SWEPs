@@ -108,7 +108,10 @@ hook.Add("PopulateWeapons","CSS_PopulateSpawnmenu",function(pnlContent,tree,node
         node.DoClick = function( self )
 
             self:DoPopulate()
-            tree.pnlContent:SwitchPanel( self.PropPanel )
+            local pnl = pnlContent or tree.pnlContent
+            if pnl != nil then
+                pnl:SwitchPanel( self.PropPanel )
+            end
 
         end
 
