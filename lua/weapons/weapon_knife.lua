@@ -89,16 +89,17 @@ local soundHitFlesh = Sound("Weapon_Knife.Hit")
 local soundBackstab = Sound("Weapon_Knife.Stab")
 local function Bullet(attacker,tr,dmginfo)
     if not IsValid(attacker) then return end
-    dmginfo:SetAttacker(attacker:GetOwner())
-    attacker.LASTHIT = true
+    local wep = attacker:GetActiveWeapon()
+    if not IsValid(wep) or wep:GetClass() != "weapon_knife" then return end
+    wep.LASTHIT = true
     if tr.Hit then
         if carms then
-            attacker:SendAnimation(
-                attacker.SECONDARY and ACT_VM_SECONDARYATTACK or ACT_VM_PRIMARYATTACK,
+            wep:SendAnimation(
+                wep.SECONDARY and ACT_VM_SECONDARYATTACK or ACT_VM_PRIMARYATTACK,
                 PLAYER_ATTACK1
             )
         else            
-            attacker:SendAnimation(
+            wep:SendAnimation(
                 ACT_VM_HITCENTER,
                 PLAYER_ATTACK1
             )
@@ -109,19 +110,19 @@ local function Bullet(attacker,tr,dmginfo)
         if IsValid(ent) then
             if ent:IsNPC() or ent:IsPlayer() then
                 dontPlayNormal = true 
-                local dir = (ent:GetPos() - attacker:GetOwner():GetPos()):GetNormalized()
+                local dir = (ent:GetPos() - wep:GetOwner():GetPos()):GetNormalized()
                 local entForward = ent:GetForward()
                 local dot = entForward:Dot(dir)
-                if dot > 0.4 and attacker.SECONDARY then
+                if dot > 0.4 and wep.SECONDARY then
                     dmginfo:SetDamage(dmginfo:GetDamage() * 2)
-                    attacker:EmitSound(soundBackstab)
+                    wep:EmitSound(soundBackstab)
                 else
-                    attacker:EmitSound(soundHitFlesh)
+                    wep:EmitSound(soundHitFlesh)
                 end
             end
         end
         if not dontPlayNormal then
-            attacker:EmitSound(soundHitWall)  
+            wep:EmitSound(soundHitWall)  
         end
         if SERVER and not (tr.Entity and (tr.Entity:IsNPC() or tr.Entity:IsPlayer())) then
             
@@ -149,7 +150,7 @@ function SWEP:PrimaryAttack()
 	bullet.AmmoType = "none"
 	bullet.Callback = Bullet
     self.SECONDARY = false
-    self:FireBullets(bullet)
+    owner:FireBullets(bullet)
     if not self.LASTHIT then
         self:EmitSound(self.Primary.Sound)
         self:SendAnimation(ACT_VM_MISSCENTER,PLAYER_ATTACK1)
@@ -177,7 +178,7 @@ function SWEP:SecondaryAttack()
 	bullet.AmmoType = "none"
 	bullet.Callback = Bullet
     self.SECONDARY = true
-    self:FireBullets(bullet)
+    owner:FireBullets(bullet)
     if not self.LASTHIT then
         self:EmitSound(self.Primary.Sound)
         self:SendAnimation(ACT_VM_MISSCENTER,PLAYER_ATTACK1)
