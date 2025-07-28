@@ -12,6 +12,39 @@ sound.Add({
 
 })
 
+local weaponList = {
+    weapon_ak47 = true,
+    weapon_aug = true,
+    weapon_awp = true,
+    weapon_deagle = true,
+    weapon_deagleawesome = true,
+    weapon_elite = true,
+    weapon_famas = true,
+    weapon_fiveseven = true,
+    weapon_flashbang = true,
+    weapon_g3sg1 = true,
+    weapon_galil = true,
+    weapon_glock = true,
+    weapon_glockinator = true,
+    weapon_hegrenade = true,
+    weapon_knife = true,
+    weapon_m3 = true,
+    weapon_m4a1 = true,
+    weapon_m249 = true,
+    weapon_mac10 = true,
+    weapon_macdadster = true,
+    weapon_mp5navy = true,
+    weapon_p90 = true,
+    weapon_p228 = true,
+    weapon_scout = true,
+    weapon_sg550 = true,
+    weapon_sg552 = true,
+    weapon_tmp = true,
+    weapon_ump45 = true,
+    weapon_usp = true,
+    weapon_xm1014 = true,
+    weapon_xm9000 = true
+}
 
 if #list.Get("CSSWeapons") <= 0 then
     timer.Simple(1,function()
@@ -19,7 +52,7 @@ if #list.Get("CSSWeapons") <= 0 then
         for _, filename in ipairs(weaponFiles) do
             local ext = string.GetFileFromFilename(filename)
             ext = string.sub(ext,0,#ext - 4)
-            if not string.StartsWith(ext,"weapon_css") then continue end
+            if not weaponList[ext] then continue end
             local wep = weapons.Get(ext)
             if wep then list.Add("CSSWeapons",wep) end
         end
