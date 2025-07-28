@@ -29,7 +29,7 @@ SWEP.Primary.Distance = 4096
 SWEP.Primary.Ammo = "SMG1"
 SWEP.Primary.ClipSize = 30
 SWEP.Primary.DefaultClip = 30
-SWEP.Primary.Delay = 0.08
+SWEP.Primary.Delay = 0.075
 SWEP.Primary.Automatic = true
 SWEP.Primary.Damage = 36
 
