@@ -2,7 +2,7 @@ SWEP.Base = "css_weapon_pistol_base"
 
 SWEP.PrintName = "228 COMPACT"
 SWEP.Category = "Counter-Strike: Source"
-SWEP.IconLetter = "a"
+SWEP.IconLetter = "y"
 
 SWEP.HoldType = "revolver"
 
