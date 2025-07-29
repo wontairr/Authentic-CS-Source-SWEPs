@@ -39,6 +39,7 @@ local weaponList = {
     weapon_scout = true,
     weapon_sg550 = true,
     weapon_sg552 = true,
+    weapon_smokegrenade = true,
     weapon_tmp = true,
     weapon_ump45 = true,
     weapon_usp = true,
