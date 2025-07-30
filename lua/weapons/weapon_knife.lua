@@ -13,10 +13,18 @@ SWEP.HoldType = "knife"
 
 SWEP.Slot = CSSServerConvars.weapons_sandbox_slots:GetBool() and 0 or 2
 
-SWEP.CArmsSettings = {
-	offsetPos = Vector(0,4,1),
-	offsetAng = Angle(0,-5,5)
-}
+if CSSAccurateKnifeInstalled then
+    SWEP.CArmsSettings = {
+        offsetPos = Vector(0,0,0),
+        offsetAng = Angle(0,0,0)
+    }
+else
+    SWEP.CArmsSettings = {
+        offsetPos = Vector(0,4,1),
+        offsetAng = Angle(0,-5,5)
+    }
+end
+
 local carms = CSSServerConvars.weapons_carms:GetBool()
 
 SWEP.Spawnable = CSS_WeaponCompatibility:GetBool() 
