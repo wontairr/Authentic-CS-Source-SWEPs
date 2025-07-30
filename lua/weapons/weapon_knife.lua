@@ -75,11 +75,7 @@ local backstab = 2
 local deploy = Sound("Weapon_Knife.Deploy")
 
 function SWEP:IdleEnd()
-    timer.Simple(0.0,function()
-        if IsValid(self) then
-            self:DelayedEvent(self.Event.Idle,11)
-        end
-    end)
+    self:DelayedEvent(self.Event.Idle,11)
 end
 
 function SWEP:Deploy()
