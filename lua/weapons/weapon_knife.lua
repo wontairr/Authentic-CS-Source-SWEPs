@@ -15,7 +15,7 @@ SWEP.Slot = CSSServerConvars.weapons_sandbox_slots:GetBool() and 0 or 2
 
 if CSSAccurateKnifeInstalled then
     SWEP.CArmsSettings = {
-        offsetPos = Vector(0,0,0),
+        offsetPos = Vector(0,6,1),
         offsetAng = Angle(0,0,0)
     }
 else
