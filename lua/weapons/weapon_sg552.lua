@@ -160,9 +160,9 @@ SWEP.ScopingTime        = 0.2 -- How long it takes to scope in
 SWEP.HideCrosshair = false
 
 function SWEP:Deploy()
-	self.BaseClass.Deploy(self)
 	self.Primary.Delay = 0.09
 	self.SprayPattern = self.SprayPatternNormal
+	return self.BaseClass.Deploy(self)
 end
 
 function SWEP:SecondaryAttack()
