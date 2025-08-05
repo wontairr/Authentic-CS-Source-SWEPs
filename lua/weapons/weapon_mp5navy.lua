@@ -31,7 +31,7 @@ SWEP.Primary.ClipSize = 30
 SWEP.Primary.DefaultClip = 30
 SWEP.Primary.Delay = 0.075
 SWEP.Primary.Automatic = true
-SWEP.Primary.Damage = 36
+SWEP.Primary.Damage = 26
 
 
 SWEP.MaxPlayerSpeed = 250
