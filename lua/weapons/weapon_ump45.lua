@@ -26,7 +26,7 @@ SWEP.Primary.Sound = Sound("Weapon_UMP45.Single")
 
 SWEP.Primary.Distance = 4096
 
-SWEP.Primary.Ammo = "SMG1"
+SWEP.Primary.Ammo = CSS_GetAmmo("SMG1","BULLET_PLAYER_45ACP")
 SWEP.Primary.ClipSize = 25
 SWEP.Primary.DefaultClip = 25
 SWEP.Primary.Delay = 0.105
