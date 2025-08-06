@@ -23,7 +23,7 @@ SWEP.CSMuzzleScale   = 1.2
 SWEP.Primary.Sound = Sound("Weapon_DEagle.Single")
 
 SWEP.Primary.Distance = 4096
-SWEP.Primary.Ammo = "357"
+SWEP.Primary.Ammo = CSS_GetAmmo("ar2","BULLET_PLAYER_50AE")
 SWEP.Primary.ClipSize = 7
 SWEP.Primary.DefaultClip = 7
 SWEP.Primary.Delay = 0.225

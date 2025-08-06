@@ -29,7 +29,7 @@ SWEP.Primary.Sound = Sound("Weapon_M249.Single")
 
 SWEP.Primary.Distance = 8192
 
-SWEP.Primary.Ammo = "ar2"
+SWEP.Primary.Ammo = CSS_GetAmmo("ar2","BULLET_PLAYER_556MM_BOX")
 SWEP.Primary.ClipSize = 100
 SWEP.Primary.DefaultClip = 100
 SWEP.Primary.Delay = 0.08

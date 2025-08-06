@@ -29,7 +29,7 @@ SWEP.Primary.SoundSilenced = Sound("Weapon_M4A1.Silenced")
 
 SWEP.Primary.Distance = 8192
 
-SWEP.Primary.Ammo = "ar2"
+SWEP.Primary.Ammo = CSS_GetAmmo("ar2","BULLET_PLAYER_556MM")
 SWEP.Primary.ClipSize = 30
 SWEP.Primary.DefaultClip = 30
 SWEP.Primary.Delay = 0.089 -- an iota less than 0.09 because its weird

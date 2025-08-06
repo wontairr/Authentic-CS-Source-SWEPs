@@ -23,7 +23,7 @@ SWEP.Primary.Sound = Sound("Weapon_FAMAS.Single")
 
 SWEP.Recoil = true
 SWEP.Primary.Distance = 8192
-SWEP.Primary.Ammo = "ar2"
+SWEP.Primary.Ammo = CSS_GetAmmo("ar2","BULLET_PLAYER_556MM")
 SWEP.Primary.ClipSize = 25
 SWEP.Primary.DefaultClip = 25
 SWEP.Primary.Delay = 0.09

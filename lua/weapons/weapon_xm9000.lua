@@ -24,7 +24,7 @@ SWEP.Primary.Bullets = 7
 
 SWEP.Primary.Distance = 3000
 
-SWEP.Primary.Ammo = "buckshot"
+SWEP.Primary.Ammo = CSS_GetAmmo("buckshot","BULLET_PLAYER_BUCKSHOT")
 SWEP.Primary.ClipSize = 37
 SWEP.Primary.DefaultClip = 37
 SWEP.Primary.Delay = 0.12
