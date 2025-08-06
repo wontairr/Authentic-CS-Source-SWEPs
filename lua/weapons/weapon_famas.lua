@@ -31,7 +31,7 @@ SWEP.Primary.Automatic = true
 SWEP.Primary.Damage = 30
 SWEP.LastBulletThink = true
 
-SWEP.MaxPlayerSpeed = 250
+SWEP.MaxPlayerSpeed = 220
 
 SWEP.ViewModelFlip = false -- required or else due to networking the gun will be seen flipped for a sec
 SWEP.ViewModelRightHanded = true
