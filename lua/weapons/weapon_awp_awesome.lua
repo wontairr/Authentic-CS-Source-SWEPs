@@ -2,6 +2,7 @@ SWEP.Base = "css_weapon_scoped_base"
 SWEP.Type = CSS_Admin
 SWEP.Slot = CSS_SelectSlot(SWEP.Type)
 SWEP.PrintName = "AWPS-74U"
+SWEP.AdminOnly = true
 SWEP.Category = "Counter-Strike: Source"
 SWEP.IconLetter = "r"
 
