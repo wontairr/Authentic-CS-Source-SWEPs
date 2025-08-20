@@ -1,5 +1,9 @@
 SWEP.Base = "css_weapon_base"
 
+if engine.ActiveGamemode() == "terrortown" then
+    SWEP.Kind = WEAPON_MELEE
+end
+
 SWEP.DontDrop = true
 
 SWEP.PrintName = "KNIFE"
