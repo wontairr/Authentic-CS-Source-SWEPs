@@ -37,7 +37,7 @@ SWEP.Primary.Automatic = true
 SWEP.Primary.Damage = 35
 
 
-SWEP.MaxPlayerSpeed = 221
+SWEP.MaxPlayerSpeed = 220
 
 
 SWEP.Accuracy = {
