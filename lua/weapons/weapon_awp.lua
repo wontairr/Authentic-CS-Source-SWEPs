@@ -34,6 +34,8 @@ SWEP.Secondary.Automatic = true
 
 SWEP.MaxPlayerSpeed = 210
 
+SWEP.ScopeMoveSpeed = 150
+
 
 SWEP.Accuracy = {
     Spread      = 0.00020,

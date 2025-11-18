@@ -157,6 +157,8 @@ SWEP.ScopeSoundLevel 	= 0
 
 SWEP.ScopingTime        = 0.2 -- How long it takes to scope in
 
+SWEP.ScopeMoveSpeed		= 200
+
 SWEP.HideCrosshair = false
 
 function SWEP:Deploy()
