@@ -34,7 +34,7 @@ SWEP.Primary.Damage = 75
 SWEP.Secondary.Automatic = true
 
 SWEP.MaxPlayerSpeed = 260
-
+SWEP.ScopeMoveSpeed = 220
 
 
 SWEP.AccuracyUnScoped = {

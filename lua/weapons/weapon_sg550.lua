@@ -81,6 +81,6 @@ SWEP.StayScopedAfterShot = true
 
 SWEP.ScopeLevels 		= { 40, 15 } -- Fov numbers for the scoping level
 SWEP.ScopeSensLevels    = { 0.4, 0.10 } -- Sensitivity multipliers for the scoping level
-
+SWEP.ScopeMoveSpeed     = 150
 
 SWEP.IconOverride = "vgui/css/sg550_icon.png"
