@@ -150,7 +150,7 @@ function SWEP:PrimaryAttack()
     bullet.Num     	= 1
 	bullet.Dir     	= owner:EyeAngles():Forward()  -- Affected by spray pattern
     bullet.Src     	= owner:GetShootPos()
-	bullet.Spread	= 0
+	bullet.Spread	= Vector(0,0,0)
 	bullet.Distance = self.Primary.Distance
 	bullet.Tracer	= 0
 	bullet.Force	= 1
@@ -178,7 +178,7 @@ function SWEP:SecondaryAttack()
     bullet.Num     	= 1
 	bullet.Dir     	= owner:EyeAngles():Forward()  -- Affected by spray pattern
     bullet.Src     	= owner:GetShootPos()
-	bullet.Spread	= 0
+	bullet.Spread	= Vector(0,0,0)
 	bullet.Distance = self.Primary.Distance
 	bullet.Tracer	= 0
 	bullet.Force	= 1
