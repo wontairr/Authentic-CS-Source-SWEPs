@@ -1,3 +1,5 @@
+local developer = GetConVar("developer")
+
 local flashbangBright = color_white
 local flashbangDark   = Color(65,65,65)
 local function GetFlashBangColor()
@@ -127,26 +129,40 @@ CSSSmokeColor = Color(70,70,70,255)
 CSSSmokeGrenades = {}
 
 local PLAYER = FindMetaTable("Player")
-killicon.AddFont("weapon_knife","CSKillIcons","j",Color(255,80,0),0.2)
 
-hook.Add("Initialize","CSSWeapons_KillIcons",function()
+
+local killIconColor = Color(255,80,0)
+local killIconFont = "CSKillIcons"
+local function AddKillIcons()
+    local counter = 0
     for _,weapon in ipairs(weapons.GetList()) do
         if not weapon.Base then continue end
-        if string.find(weapon.Base,"css_weapon_") != nil and not killicon.Exists(weapon.ClassName) then
+        if string.find(weapon.Base,"css_weapon_") != nil then
             if weapon.ClassName == "weapon_knife" then
-                killicon.AddFont("weapon_knife","CSKillIcons","j",Color(255,80,0),0.2)
+                killicon.AddFont("weapon_knife",killIconFont,"j",killIconColor,0.2)
                 continue
             end
-            killicon.AddFont(weapon.ClassName,"CSKillIcons",weapon.IconLetter,Color(255,80,0),0.2)
+            counter = counter + 1
+            killicon.AddFont(weapon.ClassName,killIconFont,weapon.IconLetter,killIconColor,0.2)
         end
     end
-end)
-for _,weapon in ipairs(weapons.GetList()) do
-    if not weapon.Base then continue end
-    if string.find(weapon.Base,"css_weapon_") != nil then
-        killicon.AddFont(weapon.ClassName,"CSKillIcons",weapon.IconLetter,Color(255,80,0),0.2)
+    killicon.AddFont("weapon_knife",killIconFont,"j",killIconColor,0.2)
+    if developer:GetBool() then
+        MsgC(Color(0,255,0),"FINISHED ADDING CSS WEAPON KILLICONS! [ " .. tostring(counter) .. " ]\n")
     end
 end
+
+
+
+AddKillIcons()
+hook.Add("InitPostEntity","CSSWeapons_KillIcons",function()
+    timer.Simple(1,function()
+        if developer:GetBool() then
+            MsgC(Color(157,255,0),"ADDING CSS WEAPON KILLICONS...\n")
+        end
+        AddKillIcons()
+    end)
+end)
 
 hook.Add("HUDPaint","CSSHUDPaint",function()
     local ply = LocalPlayer()
